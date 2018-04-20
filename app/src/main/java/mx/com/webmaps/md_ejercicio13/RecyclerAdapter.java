@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 /**
@@ -34,7 +36,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<ViewHolder> {
         User sampleUser= users.get(position);
         holder.name.setText(sampleUser.usrName);
         holder.desc.setText(sampleUser.usrDesc);
-        holder.image.setImageResource(sampleUser.usrImage);
+        //holder.image.setImageResource(sampleUser.usrImage);
+
+        Glide.with(context).load(sampleUser.usrImage).into(holder.image);
 
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
