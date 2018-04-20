@@ -84,8 +84,11 @@ public class MainActivity extends AppCompatActivity {
             sampleUser.add(user);
         }
 
-        LinearLayoutManager linearLayoutManager= new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(linearLayoutManager);
+        //LinearLayoutManager linearLayoutManager= new LinearLayoutManager(this);
+        //recyclerView.setLayoutManager(linearLayoutManager);
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
+        recyclerView.setLayoutManager(gridLayoutManager);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(new RecyclerAdapter(getBaseContext(),sampleUser));
