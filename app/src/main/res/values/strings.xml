@@ -1,3 +1,5 @@
 <resources>
-    <string name="MD_RecyclerView">MD_Ejercicio13</string>
+    <string name="app_name">MD_RecyclerView</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
 </resources>
